@@ -19,11 +19,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final ChannelController channelController = Get.put(ChannelController());
+  //final ChannelController channelController = Get.put(ChannelController());
   @override
   Widget build(BuildContext context) {
-    List<String> channe =
-        channelController.channelList(); // ['A Tab', 'B Tab', 'C Tab'];
+    List<String> channe = [
+      'A Tab',
+      'B Tab',
+      'C Tab',
+      'D Tab',
+      'E Tab',
+      'F Tab',
+      'G Tab',
+      'H Tab',
+      'I Tab',
+      'J Tab',
+      'K Tab',
+      'L Tab',
+      'M Tab',
+      'N Tab',
+      'O Tab'
+    ];
+    //   channelController.channelList(); // ['A Tab', 'B Tab', 'C Tab'];
     // channelController.channelList();
 
     return Scaffold(
@@ -59,15 +75,17 @@ class _HomePageState extends State<HomePage> {
                                         color: Colors.grey, width: 0.5))),
                             child: TabBarView(children: <Widget>[
                               Container(
+                                height: 400,
                                 child: Center(
                                   child: GridView.count(
                                     primary: false,
                                     padding: const EdgeInsets.all(1),
-                                    crossAxisCount: 2,
+                                    crossAxisCount: 3,
+                                    // mainAxisSpacing: 5,
                                     children: <Widget>[
                                       for (var i in channe)
-                                        presentCard(context, i.toString(),
-                                            'Dashboard', Icons.light)
+                                        presentCard(context, i.toString(), 'B',
+                                            Icons.card_giftcard)
                                     ],
                                   ),
                                 ),
@@ -77,11 +95,11 @@ class _HomePageState extends State<HomePage> {
                                   child: GridView.count(
                                     primary: false,
                                     padding: const EdgeInsets.all(1),
-                                    crossAxisCount: 2,
+                                    crossAxisCount: 3,
                                     children: <Widget>[
                                       for (var i in channe)
-                                        presentCard(context, i.toString(),
-                                            'Channel', Icons.light)
+                                        presentCard(context, i.toString(), 'N',
+                                            Icons.label)
                                     ],
                                   ),
                                 ),
@@ -91,11 +109,11 @@ class _HomePageState extends State<HomePage> {
                                   child: GridView.count(
                                     primary: false,
                                     padding: const EdgeInsets.all(1),
-                                    crossAxisCount: 2,
+                                    crossAxisCount: 3,
                                     children: <Widget>[
                                       for (var i in channe)
-                                        presentCard(context, i.toString(),
-                                            'Channel Head', Icons.light)
+                                        presentCard(context, i.toString(), 'B',
+                                            Icons.change_circle)
                                     ],
                                   ),
                                 ),
@@ -161,21 +179,20 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   ElevatedButton(
-                    child: Text(
-                    count,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Dashboard_details(),
-                      ));
-                                  // Navigate back to first route when tapped.
-                  }),
+                      child: Text(
+                        count,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Dashboard_details(),
+                        ));
+                        // Navigate back to first route when tapped.
+                      }),
                   SizedBox(height: 25),
-                  
                 ],
               ),
             ),
@@ -192,8 +209,8 @@ class _HomePageState extends State<HomePage> {
             //padding: EdgeInsets.all(1),
             child: Icon(
               icon,
-              color: Colors.teal,
-              size: 70,
+              color: Colors.teal[100],
+              size: 45,
             ),
           )
         ],

@@ -8,18 +8,17 @@ import 'package:shopx/constants.dart';
 class Body extends StatelessWidget {
   @override
   // void initState(){
-  //   var respone = CallApi().getData('kra-kpi-mos-weightage?employee_id=60514&year=2021'); 
-    
+  //   var respone = CallApi().getData('kra-kpi-mos-weightage?employee_id=60514&year=2021');
+
   // }
 
   Widget build(BuildContext context) {
     //print("hello word");
-    // var respone = CallApi().getData('wastege_relations'); 
+    // var respone = CallApi().getData('wastege_relations');
     // print("hello ");
     // print(respone);
     //  print("hello ");
 
-  
     Size size = MediaQuery.of(context).size;
     // This size provide us total height and width of our screen
     TextEditingController emailController = new TextEditingController();
@@ -119,7 +118,7 @@ class Body extends StatelessWidget {
                                     border: InputBorder.none,
                                     icon: Icon(
                                       Icons.person,
-                                      color:kPrimaryColor,
+                                      color: kPrimaryColor,
                                     ),
                                     hintText: "Email or Phone number",
                                     hintStyle:
@@ -128,7 +127,7 @@ class Body extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.all(8.0),
-                              child: TextField( 
+                              child: TextField(
                                 obscureText: true,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -137,8 +136,7 @@ class Body extends StatelessWidget {
                                       color: kPrimaryColor,
                                     ),
                                     suffixIcon: Icon(Icons.remove_red_eye,
-                                        color:
-                                           kPrimaryColor),
+                                        color: kPrimaryColor),
                                     hintText: "Password",
                                     hintStyle:
                                         TextStyle(color: Colors.grey[400])),
@@ -151,9 +149,9 @@ class Body extends StatelessWidget {
                         height: 30,
                       ),
                       GestureDetector(
-                        onTap: () {  
-                         // var respone = CallApi().postData({ "username" : "dashboard" , "password" : "SNssgbd@2010"}, 'login.php');  
-                          //var respone = CallApi().getLoginData('login.php?username=dashboard&password=SNssgbd@2010');  
+                        onTap: () {
+                          // var respone = CallApi().postData({ "username" : "dashboard" , "password" : "SNssgbd@2010"}, 'login.php');
+                          //var respone = CallApi().getLoginData('login.php?username=dashboard&password=SNssgbd@2010');
                           Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => Tabs(),
                           ));
@@ -181,8 +179,7 @@ class Body extends StatelessWidget {
                       ),
                       Text(
                         "Forgot Password?",
-                        style:
-                            TextStyle(color: kPrimaryColor),
+                        style: TextStyle(color: kPrimaryColor),
                       )
                     ],
                   ),
